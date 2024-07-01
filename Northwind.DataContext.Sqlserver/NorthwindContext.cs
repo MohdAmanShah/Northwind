@@ -1,6 +1,6 @@
-﻿using Microsoft.Data.SqlClient;
-using Microsoft.EntityFrameworkCore;
-using Northwind.EntityModels;
+﻿using Microsoft.Data.SqlClient; // To use SqlConnectionStirngBuilder
+using Microsoft.EntityFrameworkCore; // To use DbSet etc
+using Northwind.EntityModels; // To use entity classes
 
 namespace Northwind.Context;
 
@@ -259,7 +259,7 @@ public partial class NorthwindContext : DbContext
         modelBuilder.Entity<Region>(entity =>
         {
             entity.HasKey(e => e.RegionId).IsClustered(false);
-
+            entity.Property(e => e.RegionId).ValueGeneratedNever();
             entity.Property(e => e.RegionDescription).IsFixedLength();
         });
 

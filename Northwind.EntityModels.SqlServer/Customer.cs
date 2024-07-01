@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,8 +12,11 @@ public partial class Customer
 {
     [Key]
     [StringLength(5)]
+    [RegularExpression("[A-Z]{5}")]
+    [Required]
     public string CustomerId { get; set; } = null!;
 
+    [Required]
     [StringLength(40)]
     public string CompanyName { get; set; } = null!;
 
@@ -40,6 +41,7 @@ public partial class Customer
     [StringLength(15)]
     public string? Country { get; set; }
 
+    [Phone]
     [StringLength(24)]
     public string? Phone { get; set; }
 
