@@ -8,14 +8,14 @@ namespace Northwind.Context
     public static class NorthwindContextExtension
     {
         /// <summary>
-        ///  Adds NorthwindContext to the specified IServiceCollection. Uses the 
+        ///  Adds NorthwindDataContext to the specified IServiceCollection. Uses the 
         ///  Sql server database provider.
         /// </summary>
         /// <param name="services">The service collection</param>
         /// <param name="serverName">NOA\\SQLEXPRESS</param>
         /// <param name="databaseName"></param>
         /// <returns></returns>
-        public static IServiceCollection AddNorthwindContext(this IServiceCollection services, string databaseName, string serverName = "NOA\\SQLEXPRESS")
+        public static IServiceCollection AddNorthwindDataContext(this IServiceCollection services, string databaseName = "Northwind", string serverName = "NOA\\SQLEXPRESS")
         {
             SqlConnectionStringBuilder builder = new();
             builder.DataSource = serverName;
@@ -28,7 +28,7 @@ namespace Northwind.Context
 
             NorthwindContextLogger.WriteLine(connectionString);
 
-            services.AddDbContext<NorthwindContext>(options =>
+            services.AddDbContext<NorthwindDataContext>(options =>
             {
                 options.UseSqlServer(connectionString);
                 options.LogTo(NorthwindContextLogger.WriteLine, new[] { Microsoft.EntityFrameworkCore

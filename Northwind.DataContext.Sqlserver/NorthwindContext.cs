@@ -4,13 +4,13 @@ using Northwind.EntityModels; // To use entity classes
 
 namespace Northwind.Context;
 
-public partial class NorthwindContext : DbContext
+public partial class NorthwindDataContext : DbContext
 {
-    public NorthwindContext()
+    public NorthwindDataContext()
     {
     }
 
-    public NorthwindContext(DbContextOptions<NorthwindContext> options)
+    public NorthwindDataContext(DbContextOptions<NorthwindDataContext> options)
         : base(options)
     {
     }

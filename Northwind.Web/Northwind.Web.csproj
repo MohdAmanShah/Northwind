@@ -7,7 +7,11 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<Using Include="System.Console" Static="true"/>
+	  <ProjectReference Include="..\Northwind.DataContext.Sqlserver\Northwind.Context.SqlServer.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Using Include="System.Console" Static="true" />
 	</ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-using Northwind.Context; // To use NorthwindContext
+using Northwind.Context; // To use NorthwindDataContext
 using Northwind.EntityModels;
 
 namespace Northwind.UnitTest
@@ -8,14 +8,14 @@ namespace Northwind.UnitTest
         [Fact]
         public void DatabaseConnectionTest()
         {
-            using NorthwindContext db = new();
+            using NorthwindDataContext db = new();
             Assert.True(db.Database.CanConnect());
         }
 
         [Fact]
         public void CategoryCountTest()
         {
-            using NorthwindContext db = new();
+            using NorthwindDataContext db = new();
             int expected = 8;
             int actual = db.Categories.Count();
         }
@@ -23,7 +23,7 @@ namespace Northwind.UnitTest
         [Fact]
         public void ProductIdIsChaiTest()
         {
-            using NorthwindContext db = new();
+            using NorthwindDataContext db = new();
 
             string expected = "Chai";
             Product? product = db.Products.Find(keyValues: 1);
