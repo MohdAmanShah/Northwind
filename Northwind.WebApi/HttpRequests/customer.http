@@ -1,0 +1,56 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+@base_address = https://localhost:5151/api/customer/
+
+# Make a get request to base address
+GET {{base_address}}
+
+### Get customers in Germany
+GET {{base_address}}?country=India
+
+### Get Customer in USA in XML format
+GET {{base_address}}?country=USA
+Accept: application/xml
+
+### Get Customer by Id
+GET {{base_address}}alfki
+
+### Get a non-existant customer
+GET {{base_address}}abcd
+
+### POST request to base address
+POST {{base_address}}
+content-type: application/json
+{
+ "customerID": "MASHC",
+ "companyName": "Noa Co.",
+ "contactName": "Mohd Aman Shah",
+ "contactTitle": "Sir",
+ "address": "Near Dakpathar Bus Stand",
+ "city": "Ambaari",
+ "region": "India",
+ "postalCode": "248125",
+ "country": "India",
+ "phone": "7310976105"
+}
+
+### Delete request to customer
+DELETE {{base_address}}masha
+
+### Update request to customer
+PUT {{base_address}}alfki
+content-type: application/json
+ {
+    "customerId": "ALFKI",
+    "companyName": "Alfreds Futterkiste",
+    "contactName": "Maria Anders",
+    "contactTitle": "Sales Representative",
+    "address": "Obere Str. 57",
+    "city": "Berlin",
+    "region": null,
+    "postalCode": "12209",
+    "country": "Germany",
+    "phone": "030-0074321",
+    "fax": "030-0076545",
+    "orders": [],
+    "customerTypes": []
+  }

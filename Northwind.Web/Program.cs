@@ -15,10 +15,10 @@ WebApplication app = builder.Build();
 
 if (!app.Environment.IsDevelopment())
 {
-    app.UseHsts();
+    app.UseHsts();//to attach http strict transport security header to every request.s
     app.UseDeveloperExceptionPage();
 }
-
+// Custom Middleware
 app.Use(async (HttpContext context, Func<Task> next) =>
 {
     RouteEndpoint? rep = context.GetEndpoint() as RouteEndpoint;
@@ -43,6 +43,7 @@ app.Use(async (HttpContext context, Func<Task> next) =>
     await next();
 
 });
+
 app.UseHttpsRedirection();
 app.UseDefaultFiles();
 app.UseStaticFiles();
