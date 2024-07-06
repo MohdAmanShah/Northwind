@@ -1,0 +1,16 @@
+﻿@rendermode RenderMode.InteractiveWebAssembly
+@page "/createcustomer"
+@inject INorthwindService _service
+@inject NavigationManager _nav
+<h3>CreateCustomer</h3>
+<CustomerDetails ButtonText="Create Customer" OnValidSubmit="@Create" customer="@customer" />
+
+@code {
+    private EntityModels.Customer customer = new();
+
+    private async Task Create()
+    {
+        await _service.CreateCustomerAsync(customer);
+        _nav.NavigateTo("customer");
+    }
+}

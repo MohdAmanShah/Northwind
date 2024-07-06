@@ -13,7 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind.Web", "Northwind.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind.WebApi", "Northwind.WebApi\Northwind.WebApi.csproj", "{237E56CA-A65A-41E5-BAD9-C3BCFCEF7A00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.Mvc", "Northwind.Mvc\Northwind.Mvc.csproj", "{605790E5-220F-4D0E-AF12-3922CEAEB2E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind.Mvc", "Northwind.Mvc\Northwind.Mvc.csproj", "{605790E5-220F-4D0E-AF12-3922CEAEB2E3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind.Blazor", "Northwind.Blazor\Northwind.Blazor.csproj", "{A0F47576-E780-4AC0-ACDE-5B475E83346E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind.Blazor.Services", "Northwind.Blazor.Services\Northwind.Blazor.Services.csproj", "{E0AA92F0-D14A-485F-BCC6-9B4094A5DA86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.Blazor.Wasm", "Northwind.Blazor.Wasm\Northwind.Blazor.Wasm.csproj", "{07B27BF4-B1C6-4344-B6AE-E11B1C0623E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +51,18 @@ Global
 		{605790E5-220F-4D0E-AF12-3922CEAEB2E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{605790E5-220F-4D0E-AF12-3922CEAEB2E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{605790E5-220F-4D0E-AF12-3922CEAEB2E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0F47576-E780-4AC0-ACDE-5B475E83346E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0F47576-E780-4AC0-ACDE-5B475E83346E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0F47576-E780-4AC0-ACDE-5B475E83346E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0F47576-E780-4AC0-ACDE-5B475E83346E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0AA92F0-D14A-485F-BCC6-9B4094A5DA86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0AA92F0-D14A-485F-BCC6-9B4094A5DA86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0AA92F0-D14A-485F-BCC6-9B4094A5DA86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0AA92F0-D14A-485F-BCC6-9B4094A5DA86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07B27BF4-B1C6-4344-B6AE-E11B1C0623E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07B27BF4-B1C6-4344-B6AE-E11B1C0623E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07B27BF4-B1C6-4344-B6AE-E11B1C0623E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07B27BF4-B1C6-4344-B6AE-E11B1C0623E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

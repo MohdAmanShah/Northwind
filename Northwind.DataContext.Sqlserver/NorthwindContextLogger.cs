@@ -8,12 +8,24 @@ namespace Northwind.Context
 {
     public class NorthwindContextLogger
     {
-        public static void WriteLine(string message)
+        public async static void WriteLine(string message)
         {
             string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory), "Northwind.txt");
             StreamWriter writer = File.AppendText(path);
-            writer.WriteLine(message);
-            writer.Close();
+            try
+            {
+                writer.WriteLine(message);
+                writer.Close();
+            }
+            catch
+            {
+                await Task.Delay(100);
+                writer.WriteLine(message);
+            }
+            finally
+            {
+                writer.Close();
+            }
         }
     }
 }
