@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Northwind.Blazor.Services;
 using Northwind.Blazor.Wasm.Services;
-using System.Net.Http.Headers;
+using System.Net.Http.Headers; // To use MediaTypeWithQualityHeaderValue
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.Services.AddHttpClient(name: "Northwind.WebApi",

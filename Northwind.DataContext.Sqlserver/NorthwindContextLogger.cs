@@ -19,7 +19,7 @@ namespace Northwind.Context
             }
             catch
             {
-                await Task.Delay(100);
+                await Task.Delay(1000);
                 writer.WriteLine(message);
             }
             finally
